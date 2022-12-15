@@ -1,0 +1,24 @@
+mkdir project
+cd project/
+Git init
+
+Git config --global user.name "Deepak404"
+Git config --global user.email "dkbharti1010@gmail.com"
+
+Git remote add origin git@github.com/Deepak404/project.git
+
+ssh-keygen -t rsa -b 4096 -C "dkbharti1010@gmail.com"
+
+cat /root/.ssh/id_rsa.pub
+
+
+exec ssh-agent bash
+eval ssh-agent -s
+ssh-add ~/.ssh/id_rsa
+
+
+Create a file:
+Vi test.txt
+Git add test.txt
+Git commit -m "my 1st commit"
+Git push origin master
