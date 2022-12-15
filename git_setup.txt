@@ -1,13 +1,13 @@
 mkdir project
 cd project/
-Git init
+git init
 
-Git config --global user.name "Deepak404"
-Git config --global user.email "dkbharti1010@gmail.com"
+git config --global user.name "username"
+git config --global user.email "abc@gmail.com"
 
-Git remote add origin git@github.com/Deepak404/project.git
+git remote add origin git@github.com/<username>/project.git
 
-ssh-keygen -t rsa -b 4096 -C "dkbharti1010@gmail.com"
+ssh-keygen -t rsa -b 4096 -C "abc@gmail.com"
 
 cat /root/.ssh/id_rsa.pub
 
@@ -17,8 +17,8 @@ eval ssh-agent -s
 ssh-add ~/.ssh/id_rsa
 
 
-Create a file:
-Vi test.txt
-Git add test.txt
-Git commit -m "my 1st commit"
-Git push origin master
+#Create a file:
+vi test.txt  # add some content to file
+git add test.txt
+git commit -m "my 1st commit"
+git push origin master
